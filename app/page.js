@@ -1,113 +1,198 @@
-import Image from "next/image";
+import BlogSection from "@/components/common/BlogSection";
+import BtnPrimary from "@/components/common/Btn/BtnPrimary";
+import BtnSecondary from "@/components/common/Btn/BtnSecondary";
+import FeatureCard from "@/components/common/Card/FeatureCard";
+import SolutionCard from "@/components/common/Card/SolutionCard";
+import CTASection from "@/components/common/CTASection";
+import Heading from "@/components/common/Heading";
+import SelectComponent from "@/components/common/SelectComponent";
+import TestimonialSection from "@/components/common/TestimonialSection";
+import { HomeHero } from "@/components/home/HomeHero";
+import HomeLogoCarousel from "@/components/home/HomeLogoCarousel";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <HomeHero />
+
+      <HomeLogoCarousel />
+
+      <div className="p-16 py-20 bg-neutral-100 flex flex-col gap-12">
+        <Heading
+          mainHeading="One solution for all your creative needs"
+          paragraph="Future of work with the products designed for high performance & scalability."
+          headingClassName='text-neutral-800'
+        />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <SolutionCard
+            img="https://framerusercontent.com/images/B9AW397Xk9Am6xL7iv4jr5pNyAE.svg"
+            heading="Cloud Computer"
+            description="Cloud computing offers scalable, on-demand access to a wide range of computing resources over the internet."
+            className="bg-blue-50"
+            headingClassName="text-blue-600"
+          />
+          <SolutionCard
+            img="https://framerusercontent.com/images/8jJjtUeeQKF4LwHXum3sYsPFTq8.svg"
+            heading="Temporary Workspaces"
+            description="Temporary workspaces in the cloud allow users to quickly set up virtual environments for development."
+            className="bg-neutral-50"
+            headingClassName="text-neutral-900"
+          />
+          <SolutionCard
+            img="https://framerusercontent.com/images/J3Nq1LJBEoBCbCUhLULgMyCvX4.svg"
+            heading="Application Streaming"
+            description="Application streaming delivers software applications from the cloud directly to end-user devices."
+            className="bg-teal-50"
+            headingClassName="text-teal-600"
+          />
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      <div className="px-16 py-20 flex flex-col gap-12">
+        <Heading
+          subheading='Features'
+          mainHeading="Performance at scale on your device"
+          paragraph="Turn any device into a professional workstation with just a click."
+          headingClassName='text-violet-800'
+          className='items-center text-center'
         />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <FeatureCard
+            img="https://framerusercontent.com/images/a9K0yXZdRmHjRrIt4fTmDSuuvGU.png"
+            heading="High Quality & Low Latency Streaming"
+            description="Vagon Interactive Streaming Protocol provides up to 4K & 60FPS streaming with full-color support and brings zero latency experience with auto-adjusted streaming configurations."
+          />
+          <FeatureCard
+            img="https://framerusercontent.com/images/r1amgOtbD1p7LWKkwy7Bn1y5B8I.png"
+            heading="RTX Enabled NVIDIA GPUs"
+            description="Vagon Interactive Streaming Protocol provides up to 4K & 60FPS streaming with full-color support and brings zero latency experience with auto-adjusted streaming configurations."
+          />
+          <FeatureCard
+            img="https://framerusercontent.com/images/5XOj1wRsFyjf46siOnnnNl2wanQ.png"
+            heading="Worldwide Coverage"
+            description="Vagon Interactive Streaming Protocol provides up to 4K & 60FPS streaming with full-color support and brings zero latency experience with auto-adjusted streaming configurations."
+          />
+          <FeatureCard
+            img="https://framerusercontent.com/images/QUnzsnRGEC8w0TJZCqweW2ZnR8.png?scale-down-to=2048"
+            heading="Encrypted Connection & Isolated Environments"
+            description="Vagon Interactive Streaming Protocol provides up to 4K & 60FPS streaming with full-color support and brings zero latency experience with auto-adjusted streaming configurations."
+          />
+          <FeatureCard
+            img="https://framerusercontent.com/images/BAOfYoJ80xhcOisSbxsns6tGs.png?scale-down-to=2048"
+            heading="Use Any Device as a Workstation"
+            description="Vagon Interactive Streaming Protocol provides up to 4K & 60FPS streaming with full-color support and brings zero latency experience with auto-adjusted streaming configurations."
+          />
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div className="px-16 py-20 flex flex-col gap-12 bg-blue-50/50">
+        <Heading
+          subheading='cloud computer'
+          mainHeading="Remote Desktop for Creatives, Gamers & Engineers"
+          paragraph="Run graphic-intensive apps with latest generation hardware, step up your workflow with enhanced features."
+          headingClassName='text-blue-600'
+          className='items-center text-center'
+        />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className="flex flex-col gap-20 py-8">
+          <div className="flex flex-col sm:flex-row gap-16 items-center">
+            <div className="rounded-xl overflow-hidden max-h-96 w-1/2">
+              <img src="https://framerusercontent.com/images/CzHzAumYDkDHSK4dHkLyNr9H59s.png?scale-down-to=1024" alt="" className="w-full object-cover" />
+            </div>
+            <div className="flex flex-col gap-8 w-1/2">
+              <h3 className="text-3xl font-semibold text-neutral-900">Personal remote desktop just for you, and your creative needs</h3>
+              <div className="flex flex-col gap-6">
+                <p>Vagon Cloud Computer makes remote desktop experiences accessible for everyone with 4K resolution and 60 FPS streaming experience.</p>
+                <p>✓ Secure, isolated and personal workspace</p>
+                <p>✓ Ability to configure computer hardware on the go</p>
+                <p>✓ Mobile & tablet device support, connect from any device</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <BtnPrimary text={'Try Vagon Computer Now'} />
+                <BtnSecondary text={'Explore All Features'} />
+              </div>
+            </div>
+          </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <SelectComponent selectedBgColor="bg-blue-100" selectedTextColor="text-blue-600" />
+        </div>
       </div>
-    </main>
+
+      <TestimonialSection />
+
+      <div className="py-16 px-6">
+        <div className="px-16 py-20 flex flex-col gap-12 bg-neutral-50/50 w-full rounded-xl">
+          <Heading
+            subheading='cloud computer'
+            mainHeading="Remote Desktop for Creatives, Gamers & Engineers"
+            paragraph="Run graphic-intensive apps with latest generation hardware, step up your workflow with enhanced features."
+            headingClassName='text-neutral-900'
+            className='items-center text-center'
+          />
+
+          <div className="flex flex-col gap-20 py-8">
+            <div className="flex flex-col sm:flex-row gap-16 items-center">
+              <div className="rounded-xl overflow-hidden max-h-96 w-1/2">
+                <img src="https://framerusercontent.com/images/CzHzAumYDkDHSK4dHkLyNr9H59s.png?scale-down-to=1024" alt="" className="w-full object-cover" />
+              </div>
+              <div className="flex flex-col gap-8 w-1/2">
+                <h3 className="text-3xl font-semibold text-neutral-900">Personal remote desktop just for you, and your creative needs</h3>
+                <div className="flex flex-col gap-6">
+                  <p>Vagon Cloud Computer makes remote desktop experiences accessible for everyone with 4K resolution and 60 FPS streaming experience.</p>
+                  <p>✓ Secure, isolated and personal workspace</p>
+                  <p>✓ Ability to configure computer hardware on the go</p>
+                  <p>✓ Mobile & tablet device support, connect from any device</p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <BtnPrimary text={'Try Vagon Computer Now'} />
+                  <BtnSecondary text={'Explore All Features'} />
+                </div>
+              </div>
+            </div>
+
+            <SelectComponent selectedBgColor="bg-neutral-200" selectedTextColor="text-neutral-900" />
+          </div>
+        </div>
+      </div>
+
+      <div className="py-16 px-6 bg-neutral-50/50">
+        <div className="px-16 py-20 flex flex-col gap-12 bg-teal-50/50 w-full rounded-xl">
+          <Heading
+            subheading='cloud computer'
+            mainHeading="Remote Desktop for Creatives, Gamers & Engineers"
+            paragraph="Run graphic-intensive apps with latest generation hardware, step up your workflow with enhanced features."
+            headingClassName='text-teal-600'
+            className='items-center text-center'
+          />
+
+          <div className="flex flex-col gap-20 py-8">
+            <div className="flex flex-col sm:flex-row gap-16 items-center">
+              <div className="rounded-xl overflow-hidden max-h-96 w-1/2">
+                <img src="https://framerusercontent.com/images/CzHzAumYDkDHSK4dHkLyNr9H59s.png?scale-down-to=1024" alt="" className="w-full object-cover" />
+              </div>
+              <div className="flex flex-col gap-8 w-1/2">
+                <h3 className="text-3xl font-semibold text-neutral-900">Personal remote desktop just for you, and your creative needs</h3>
+                <div className="flex flex-col gap-6">
+                  <p>Vagon Cloud Computer makes remote desktop experiences accessible for everyone with 4K resolution and 60 FPS streaming experience.</p>
+                  <p>✓ Secure, isolated and personal workspace</p>
+                  <p>✓ Ability to configure computer hardware on the go</p>
+                  <p>✓ Mobile & tablet device support, connect from any device</p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <BtnPrimary text={'Try Vagon Computer Now'} />
+                  <BtnSecondary text={'Explore All Features'} />
+                </div>
+              </div>
+            </div>
+
+            <SelectComponent selectedBgColor="bg-teal-100" selectedTextColor="text-teal-600" />
+          </div>
+        </div>
+      </div>
+
+      <CTASection />
+
+      <BlogSection />
+    </>
   );
 }
